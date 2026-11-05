@@ -1,0 +1,105 @@
+const T={mn:{n5:"Үнэ тооцоолуур",n1:"Цуглуулга",n2:"3D хөшгийн студи",n3:"Үйлчилгээ",n4:"Холбоо барих",h1:"Таны орон зай. Таны хэмжээ. Таны хөшиг.",hp:"Лена Хоум нь цонхыг тань биечлэн хэмжиж, даавуу, өнгийг тань сонгож, захиалгаар хөшиг оёдог.",cta1:"Үнэ тооцоолох",cta2:"Даавуу үзэх",search:"Өнгөний код хайх…",all:"Бүх материал",sd:"Өрөө, даавуу, хэв маягаа сонгоод хөшгөө урьдчилан харна уу. Чирж эргүүлэх, гүйлгэж томруулах.",room:"Өрөө",tod:"Цаг үе",tm:"Өглөө",td:"Өдөр",te:"Орой",tn:"Шөнө",ww:"Цонхны өргөн (см)",wh:"Цонхны өндөр (см)",ch:"Таазны өндөр (см)",nw:"Цонхны тоо",np:"Хөшгийн тоо",fu:"Нягтрал (х)",st:"Хэв маяг",op:"Тунгалаг байдал",sel:"Сонгосон даавуу",pc:"Урьдчилсан өнгө",up:"Swatch зураг оруулах",note:"Албан ёсны swatch оруулаагүй бол өнгө нь зөвхөн урьдчилсан харагдац бөгөөд үйлдвэрлэгчийн өнгө БИШ.",sew:"Оёдлын зардал",acc:"Дагалдах хэрэгсэл",rail:"Карниз / дам",ins:"Угсралт",del:"Хүргэлт",pm:"Үнэ/м (тохируулах)",req:"Зөвлөгөө авах хүсэлт",svc:["Цонх хэмжилт","Захиалгат хөшиг оёдол","Даавуу зөвлөгөө","Хөшиг угсралт","Өнгөний зөвлөгөө"],bd:"Лена Хоум нь захиалгат хөшгийн компани: цонхны мэргэжлийн хэмжилт, чанартай даавуу, хувийн хэрэгцээнд нийцсэн оёдол.",dir:"Чиглэл",fm:"Бид тантай удахгүй холбогдоно.",nm:"Нэр",ph:"Утасны дугаар",dt:"Хүссэн огноо / дэлгэрэнгүй",send:"Илгээх",need:"Шаардлагатай даавуу",fab:"Даавууны зардал",tot:"Нийт (урьдчилсан)",tbc:"Үнийг админ тохируулна",cod:"Код",avail:"Swatch зураг шаардлагатай",ok:"Хүсэлт бэлтгэгдлээ. Түр хүлээнэ үү — одоогоор утсаар 7747 7788 дугаарт холбогдоно уу.",conf:"Эцсийн хэмжээг манай баг баталгаажуулна.",m:"м",colors:"өнгө",pick:"Даавуу сонгоогүй"},
+en:{n5:"Price Calculator",n1:"Collections",n2:"3D Curtain Studio",n3:"Services",n4:"Contact",h1:"Your Space. Your Measurements. Your Perfect Curtains.",hp:"Lena Home measures your windows in person, helps you choose fabric and colour, and makes curtains to order.",cta1:"Calculate price",cta2:"Browse fabrics",search:"Search colour code…",all:"All materials",sd:"Choose a room, fabric and style to preview your curtains. Drag to rotate, scroll to zoom.",room:"Room",tod:"Time of day",tm:"Morning",td:"Daytime",te:"Evening",tn:"Night",ww:"Window width (cm)",wh:"Window height (cm)",ch:"Ceiling height (cm)",nw:"Windows",np:"Panels",fu:"Fullness (x)",st:"Style",op:"Transparency",sel:"Selected fabric",pc:"Preview colour",up:"Upload swatch image",note:"Unless an official swatch is uploaded, the colour is only a preview stand-in and NOT the manufacturer’s colour.",sew:"Sewing cost",acc:"Accessories",rail:"Rails / tracks",ins:"Installation",del:"Delivery",pm:"Price/m (set)",req:"Request a Consultation",svc:["Window measurements","Custom curtain manufacturing","Fabric consultation","Curtain installation","Interior colour consultation"],bd:"Lena Home is a custom-made curtain company: professional window measurements, premium fabrics and manufacturing to your needs.",dir:"Directions",fm:"We will contact you shortly.",nm:"Name",ph:"Phone number",dt:"Preferred date / details",send:"Send",need:"Fabric required",fab:"Fabric cost",tot:"Total (estimate)",tbc:"Price set by admin",cod:"Code",avail:"Swatch Image Required",ok:"Request prepared. Backend not connected yet — please call 7747 7788.",conf:"Final measurements are confirmed by our team.",m:"m",colors:"colours",pick:"No fabric selected"}};
+const M=[
+["New Drappe",130000,"10200,14959,14964,14993,15019,14990,14988,15021,14998,15001,15006,14985,14960,14997,14984,14962,14955,14981,15017,14968,14958,14978,14977,14952,14963,15008,15011,14974,15002,14957,14965,14969,15015"],
+["Dokufon 16",140000,"SO1,S54,S51,S35,S22,S23,S12,S39,S56,S09,O1,O2,O7,O3,O8,O5,O6"],
+["Dokufon 20",140000,"C02,C06,C13,C01,E12,E17,C17,C12,E06,E09,E08,E20"],
+["Gagla / Jakak Fonluk",130000,"O2,13,O7,10,O9"],
+["Venezia",110000,"P2027,P2030,P2029,P2028,P2031,P2034,P2032,P2033,P2035,P2036,P2037,P2168,P2169,P2172,P2173,P2174,P2175,P2176,P2194,P2196,P2201,P2170,P2171,P2183,P2188,P2184,P2186,P2187,P2185,P2189,P2203,P2202,P2204,P2205,P2206,P2200,P2198,P2197,P2199,P2177,P2178,P2179,P2180"],
+["RZB Torgon",85000,"SERENITY HOME 01,02,03,04,06,07,09,10,11,12,13,14,16,17,18,19,20,21,23,24,27,29,30,31,32,33,34,36,37,38,39,40,41,42,43,44,46,47,48"],
+["Blackout",95000,"VR-4368-KREM,10326-BLEJ,VR10327-ACIK,VR-10328-KREM,VR-10329-TAŞ,VR-10331-AÇIK,VR-10332-AQUA,VR-10334-AÇIK GRI,VR-10335-AÇIK GÜL KURUSU,VR-10336-GÜL KURUSU,VR-10337-AÇIK MÜRDÜM,VR-10338-KIREMIT,VR-10339-BORDO,VR-10340-MÜRDÜM,VR-1041-HARDAL,VR-1042-CAMEL,VR-1043-KOYU TOPRAK,VR-1044-KAHVE,VR-18874-KOYU GRI,VR-10345-LACIVERT,VR-10346-SIYAH"],
+["Abylife",null,"V-DB 426,V-DE 2906,V-DE 2907,V-DK 10925,V-DS 5937,V-DS 5603,V-DK 9782,V-DK 9756,V-DK 10395,V-DK 10923,V-DK 9832,V-DK 10924,V-DK 9759,V-DM 6406,V-DM 6407"],
+["Petek Kadife",null,"124889 KREM,02 KREM,03 A.BEJ,12480 TAŞ,12490 BEJ,35 BEJ,10 DEVE TÜYÜ,36 KAKAO,28 KAHVE,29 S.KAHVE,12483 KAHVE,12485 HARDAL,13 A.HARDAL,12478 SARI,12 K.SARI,16 ÇIMEN YEŞIL,17 K.YEŞIL,12487 K.PETROL,18 PETROL,12482 A.PETROL,07 TURKUAZ,09 MINT,08 MAVI,19 A.INDIGO,31 PARLAMENT,32 K.LACIVERT,04 GRI,12488 GRI,30 K.GRI,12484 ANTRASIT,34 PUDRA,12481 G.KURUSU,05 PEMBE,06 Y.AĞIZI,21 K.LILA,20 G.KURUSU,22 FUŞYA,12479 MÜRDÜM,25 VIŞNE,24 MOR,26 MÜRDÜM,11 ORANJ,12486 KIREMIT,23 KIRMIZI,27 BORDO,33 SIYAH"],
+["Rashel Blinds",null,"10,12,51,13,15,16,17,54,18,52,53,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50"]
+].map(([n,p,c],i)=>({id:i,n,p,c:c.split(",")}));
+const $=id=>document.getElementById(id);let L="mn",sel=null,tex=null,swatches={};
+const t=k=>T[L][k];
+const fmt=n=>Math.round(n).toLocaleString("en-US")+" MNT";
+const CN={KREM:['cream','цөцгий','#f1e6c8'],BEJ:['beige','бежи','#d9c3a0'],BLEJ:['beige','бежи','#d9c3a0'],'TAŞ':['stone','чулуун','#bdb3a2'],AQUA:['aqua','аква','#7fc4c0'],GRI:['grey','саарал','#9a9a9a'],'GÜL KURUSU':['dried rose','хатсан сарнай','#c79a96'],'G.KURUSU':['dried rose','хатсан сарнай','#c79a96'],'MÜRDÜM':['plum','чавга','#6d3b5c'],KIREMIT:['brick','тоосго','#a5503a'],BORDO:['burgundy','час улаан','#6a1f2b'],HARDAL:['mustard','гич','#c79a2a'],CAMEL:['camel','тэмээн','#b8864f'],TOPRAK:['earth','хөрс','#7a5a40'],KAHVE:['brown','хүрэн','#6b4a32'],LACIVERT:['navy','хар хөх','#1f2a4a'],SIYAH:['black','хар','#1a1a1a'],'DEVE TÜYÜ':['camel hair','тэмээний ноос','#b79a73'],KAKAO:['cocoa','какао','#7a5640'],SARI:['yellow','шар','#e0b92e'],'YEŞIL':['green','ногоон','#3f7a4a'],PETROL:['petrol','петрол','#1f5a63'],TURKUAZ:['turquoise','номин','#2bb3b0'],MINT:['mint','гаа','#9fd8c0'],MAVI:['blue','цэнхэр','#2f6fb5'],INDIGO:['indigo','индиго','#3a4a8a'],PARLAMENT:['parliament blue','парламент цэнхэр','#243a6e'],ANTRASIT:['anthracite','антрацит','#383c40'],PUDRA:['powder pink','нунтаг ягаан','#e3c3c0'],PEMBE:['pink','ягаан','#e08ba3'],'Y.AĞIZI':['fawn','цайвар хүрэн','#c9a77f'],LILA:['lilac','нил ягаан','#a98bc0'],'FUŞYA':['fuchsia','фуксиа','#c2185b'],'VIŞNE':['sour cherry','интоор','#7a1e33'],MOR:['purple','нил','#6a3d8f'],ORANJ:['orange','улбар шар','#e07a1f'],KIRMIZI:['red','улаан','#b3202a']};
+const mix=(h,c,a)=>{const p=s=>[1,3,5].map(i=>parseInt(s.slice(i,i+2),16)),A=p(h),B=p(c);return"#"+A.map((v,i)=>Math.round(v+(B[i]-v)*a).toString(16).padStart(2,"0")).join("")};
+// Colour NAMES are read from the Turkish words already inside the Blackout and Petek codes; hex is an approximate preview tint, NOT a manufacturer value.
+const cn=(mi,code)=>{if(mi!==6&&mi!==8)return null;let s=code.toUpperCase();s=mi===6?s.split("-").pop():s.replace(/^\d+\s+/,"");let md="";const rl=/^(A[ÇC]IK|A\.)\s*/,rd=/^(KOYU|K\.)\s*/;if(rl.test(s)){md="l";s=s.replace(rl,"")}else if(rd.test(s)){md="d";s=s.replace(rd,"")}
+const k=CN[s]?s:Object.keys(CN).filter(x=>s.includes(x)).sort((a,b)=>b.length-a.length)[0];
+if(!k)return md?{en:md==="l"?"light":"dark",mn:md==="l"?"цайвар":"бараан",hex:null}:null;
+let[en,mn,h]=CN[k];if(md){h=mix(h,md==="l"?"#ffffff":"#000000",.35);en=(md==="l"?"light ":"dark ")+en;mn=(md==="l"?"цайвар ":"бараан ")+mn}return{en,mn,hex:h}};
+const dot=(mi,c)=>{const n=cn(mi,c);return n&&n.hex?`<i class="dot" style="background:${n.hex}"></i>`:""};
+const cnT=(mi,c)=>{const n=cn(mi,c);return n?" · "+n[L]:""};
+function applyLang(){document.documentElement.lang=L;document.querySelectorAll("[data-i]").forEach(e=>{const v=T[L][e.dataset.i];if(typeof v==="string")e.textContent=v});
+document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=t(e.dataset.ph));
+$("svc").innerHTML=t("svc").map(s=>`<div class="card"><h3>${s}</h3></div>`).join("");
+$("mf").innerHTML=`<option value="-1">${t("all")}</option>`+M.map(m=>`<option value="${m.id}">${m.n}</option>`).join("");
+renderCols();updSel()}
+function renderCols(){const q=$("q").value.trim().toLowerCase(),f=+$("mf").value;
+$("cols").innerHTML=M.filter(m=>f<0||m.id===f).map(m=>{const cs=m.c.filter(c=>!q||c.toLowerCase().includes(q)||m.n.toLowerCase().includes(q)||(cn(m.id,c)&&(cn(m.id,c).en+" "+cn(m.id,c).mn).includes(q)));if(!cs.length)return"";
+return`<div class="card"><h3>${m.n}</h3><div class="mu">${m.p?fmt(m.p)+" / "+t("m"):t("tbc")} · ${m.c.length} ${t("colors")}</div><div class="chips">${cs.map(c=>`<span class="chip${sel&&sel.m===m.id&&sel.c===c?" on":""}" data-m="${m.id}" data-c="${c.replace(/"/g,"&quot;")}" title="${t("avail")}${cnT(m.id,c)}">${dot(m.id,c)}${c}</span>`).join("")}</div></div>`}).join("")}
+$("cols").onclick=e=>{const d=e.target.closest(".chip");if(!d)return;sel={m:+d.dataset.m,c:d.dataset.c};renderCols();updSel()};
+function updSel(){$("selTxt").textContent=sel?`${M[sel.m].n} · ${t("cod")}: ${sel.c}${cnT(sel.m,sel.c)}${cn(sel.m,sel.c)?" ≈":""}${tex?"":" ("+t("avail")+")"}`:t("pick")}
+$("q").oninput=renderCols;$("mf").onchange=renderCols;
+$("lang").onchange=e=>{L=e.target.value;applyLang()};
+$("send").onclick=()=>{const d=sel?`${M[sel.m].n} ${sel.c}`:"";if(!$("fn").value||!$("fp").value){$("fo").textContent=t("nm")+" / "+t("ph");return}
+$("fo").textContent=t("ok");console.log("request",{name:$("fn").value,phone:$("fp").value,details:$("fd").value,fabric:d})};
+const SUN='<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/>',MOON='<path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>';
+function setTheme(m){document.documentElement.dataset.theme=m;$("ti").innerHTML=m==="dark"?SUN:MOON}
+setTheme(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+$("theme").onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+$("burger").onclick=()=>{const o=document.querySelector("nav").classList.toggle("open");$("bi").innerHTML=o?'<path d="M6 6l12 12M18 6L6 18"/>':'<path d="M4 8h16M4 16h16"/>'};
+document.querySelector("nav").onclick=e=>{if(e.target.tagName==="A"){e.currentTarget.classList.remove("open");$("bi").innerHTML='<path d="M4 8h16M4 16h16"/>'}};
+// ===== Calculator =====
+const F=n=>Math.round(n).toLocaleString("en-US")+"₮";
+const CATS=["Blackout","Хилэн (тансаг)","Чимэглэлийн даавуу","Хаалт (blinds)"],CM={6:0,8:1,9:3},cat=i=>CM[i]??2;
+const CATD=["Гэрлийг бүрэн хаана","Зөөлөн, тансаг гадаргуутай","Чимэглэлийн даавуу","Цонхны хаалт"];
+let CF={fw:280,hem:20,sew:null,sheer:null,rail:null,acc:null,ins:null,del:null,pr:{}};
+try{Object.assign(CF,JSON.parse(localStorage.getItem("lenaCF")||"{}"))}catch(e){}
+const pr=i=>i==null?null:(CF.pr[i]!=null&&CF.pr[i]!==""?+CF.pr[i]:M[i].p);
+const K={mi:null,code:null,cat:-1,cmp:[],step:0},v=id=>{const x=parseFloat($(id).value);return isNaN(x)?null:x};
+function rd(){K.w=v("kw")||0;K.h=v("kh")||0;K.n=Math.max(1,v("kn")||1);K.w2=v("kw2");K.ceil=v("kc")||270;K.inst=$("ki").value;K.ins=$("kins").checked;K.style=$("ks").value;K.layer=+$("kl").value;K.fu=+$("kf").value;K.np=+$("kp").value;K.floor=$("kfl").value==="1"}
+function calc(mi){rd();const fw=CF.fw||280,span=K.w2||(K.w+30),drop=K.floor?K.ceil-(K.inst==="ceil"?2:20):K.h+40,pcs=Math.max(1,Math.ceil((drop+30)/fw));
+const m=(span*K.fu+K.np*CF.hem)/100*pcs*K.n,sm=K.layer?(span*2+K.np*CF.hem)/100*pcs*K.n:0,p=pr(mi),h=CF.hem,rows=[];
+const R=(l,val,d)=>rows.push({l,val,d});
+R("Даавууны зардал",p!=null?m*p:null,mi==null?"Даавуу сонгоно уу":`${m.toFixed(1)} м × ${p!=null?F(p):"үнэ тохируулаагүй"}`);
+if(K.layer)R("Тюль",CF.sheer!=null?sm*CF.sheer:null,`${sm.toFixed(1)} м`);
+R("Оёдол, үйлдвэрлэл",CF.sew!=null?(m+sm)*CF.sew:null,`${(m+sm).toFixed(1)} м даавуу`);
+R("Карниз, дагалдах хэрэгсэл",CF.rail!=null||CF.acc!=null?(CF.rail||0)*span/100*K.n+(CF.acc||0)*K.n:null,`${(span/100*K.n).toFixed(1)} м карниз`);
+R("Угсралт",K.ins?(CF.ins!=null?CF.ins*K.n:null):0,K.ins?`${K.n} цонх`:"Сонгоогүй");
+R("Хүргэлт",CF.del!=null?CF.del:null,"");
+let total=0,miss=0;rows.forEach(r=>{if(r.val==null)miss++;else total+=r.val});
+return{span,drop,pcs,m,sm,rows,total,miss}}
+const tint=()=>{const n=K.mi!=null&&K.code?cn(K.mi,K.code):null;return n&&n.hex?n.hex:$("kcol").value};
+function cards(){const f=K.cat;$("cf").innerHTML=["Бүгд",...CATS].map((c,i)=>`<span class="chip${K.cat===i-1?" on":""}" data-f="${i-1}">${c}</span>`).join("");
+$("mc").innerHTML=M.filter(m=>f<0||cat(m.id)===f).map(m=>{const r=calc(m.id),p=pr(m.id),nm=m.c.map(x=>cn(m.id,x)).filter(x=>x&&x.hex).map(x=>x.hex).slice(0,6);
+const bg=nm.length>1?`repeating-linear-gradient(90deg,rgba(0,0,0,.14) 0 3px,rgba(255,255,255,.1) 3px 9px),linear-gradient(90deg,${nm.join(",")})`:"repeating-linear-gradient(90deg,#d9cfbd 0 6px,#cbbfa8 6px 9px)";
+return`<div class="mc${K.mi===m.id?" on":""}"><div class="sw" style="background:${bg}"><span>${nm.length>1?"≈ нэрнээс гаргасан өнгө":"Swatch Image Required"}</span></div><b>${m.n}</b><div class="mu">${CATS[cat(m.id)]} · ${p!=null?F(p)+" / м":"Үнэ тохируулаагүй"}</div><div class="nt">${CATD[cat(m.id)]} · ${m.c.length} өнгө<br>Шаардлагатай: ${r.m.toFixed(1)} м · ${r.pcs===1?"Өргөнд таарна":"Залгаж оёх хэрэгтэй"}<br>Даавууны үнэ: ${p!=null?F(r.m*p):"—"}</div><label class="nt"><input type="checkbox" style="width:auto" data-c="${m.id}" ${K.cmp.includes(m.id)?"checked":""}> Харьцуулах</label><button class="btn" data-s="${m.id}">${K.mi===m.id?"Сонгосон ✓":"Сонгох"}</button></div>`}).join("");
+$("cmp").innerHTML=K.cmp.length>1?`<table class="bk"><tr><td><b>Харьцуулалт</b></td><td>Хэрэгтэй м</td><td>Даавууны үнэ</td></tr>${K.cmp.map(i=>{const r=calc(i),p=pr(i);return`<tr><td>${M[i].n}</td><td>${r.m.toFixed(1)}</td><td>${p!=null?F(r.m*p):"—"}</td></tr>`}).join("")}</table>`:"";
+$("cd").innerHTML=K.mi==null?"":`<div class="nt">${M[K.mi].n} — өнгөний код сонгоно уу:</div><div class="chips">${M[K.mi].c.map(c=>`<span class="chip${K.code===c?" on":""}" data-k="${c.replace(/"/g,"&quot;")}">${dot(K.mi,c)}${c}</span>`).join("")}</div>`}
+function scene(){rd();const s=1.35,FY=390,CY=Math.max(10,FY-K.ceil*s),cs=calc(K.mi),ww=Math.min(K.w*s,720),wh=Math.min(K.h*s,FY-CY-60);let sy=FY-90*s;if(sy-wh<CY+14)sy=CY+14+wh;
+const wx=400-ww/2,wy=sy-wh,sp=Math.min(cs.span*s,780),x0=400-sp/2,top=K.inst==="ceil"?CY+4:Math.max(CY+4,wy-15*s),bot=K.floor?FY-2:sy+15*s,col=tint(),n=K.np,pw=sp/n,fo=Math.max(4,Math.round(pw*K.fu/(K.style==="pencil"?14:24))),per=pw/fo,am=K.style==="wave"?4:1.5;
+let o=`<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb8dd"/><stop offset="1" stop-color="#eaf3fa"/></linearGradient><linearGradient id="lt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="fd" gradientUnits="userSpaceOnUse" x1="${x0}" y1="0" x2="${x0+per}" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#000" stop-opacity=".3"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></linearGradient></defs>
+<rect width="800" height="440" style="fill:var(--sf)"/><rect y="${FY}" width="800" height="50" fill="#b79a74"/><rect x="${wx}" y="${wy}" width="${ww}" height="${wh}" fill="url(#sk)"/><polygon points="${wx},${FY} ${wx+ww},${FY} ${wx+ww+70},440 ${wx-70},440" fill="url(#lt)"/>
+<rect x="${wx}" y="${wy}" width="${ww}" height="${wh}" fill="none" stroke="#f4f0e8" stroke-width="6"/><line x1="400" y1="${wy}" x2="400" y2="${sy}" stroke="#f4f0e8" stroke-width="4"/>
+<rect x="270" y="${FY-95}" width="260" height="75" rx="10" style="fill:var(--mu)" opacity=".8"/><rect x="262" y="${FY-135}" width="276" height="48" rx="14" style="fill:var(--mu)" opacity=".65"/><rect x="40" y="${CY+50}" width="90" height="120" fill="none" style="stroke:var(--mu)" stroke-width="4"/>
+<rect x="660" y="${FY-40}" width="30" height="40" fill="#8a6f4d"/><circle cx="675" cy="${FY-70}" r="28" fill="#4f6b45"/><line x1="95" y1="${FY-150}" x2="95" y2="${FY}" stroke="#555" stroke-width="3"/><circle cx="95" cy="${FY-155}" r="16" fill="#ffe9bf"/>`;
+if(K.layer)o+=`<rect x="${x0}" y="${top}" width="${sp}" height="${bot-top}" fill="#fff" opacity=".42"/><rect x="${x0}" y="${top}" width="${sp}" height="${bot-top}" fill="url(#fd)" opacity=".4"/>`;
+for(let i=0;i<n;i++){const x=x0+i*pw;let d=`M${x} ${top}H${x+pw}V${bot}`;for(let j=fo*2;j>=0;j--)d+=`L${x+j*per/2} ${bot+(j%2?am:-am)}`;d+="Z";
+o+=`<path d="${d}" fill="${col}"/><path d="${d}" fill="url(#fd)"/>`;if(K.style==="pinch")o+=`<rect x="${x}" y="${top}" width="${pw}" height="12" fill="#000" opacity=".2"/>`;if(K.style==="eyelet")for(let j=0;j<fo;j++)o+=`<circle cx="${x+per*(j+.5)}" cy="${top+10}" r="3.5" fill="none" stroke="#777" stroke-width="1.5"/>`}
+o+=`<rect x="${x0-6}" y="${top-4}" width="${sp+12}" height="4" fill="#555"/>`;
+$("sc").innerHTML=`<svg viewBox="0 0 800 440">${o}</svg>`;$("scn").textContent=`Масштаб: цонх ${K.w}×${K.h} см, таазны өндөр ${K.ceil} см. ${K.mi!=null?M[K.mi].n+(K.code?" · "+K.code:""):"Даавуу сонгоогүй"}`}
+function brk(){const c=calc(K.mi);$("bk").innerHTML=c.rows.map(r=>`<tr><td>${r.l}<div class="nt">${r.d||""}</div></td><td>${r.val==null?'<span class="nt">тохируулаагүй</span>':F(r.val)}</td></tr>`).join("")+`<tr class="t"><td>Нийт (урьдчилсан)</td><td>${F(c.total)}</td></tr>`+(c.miss?`<tr><td colspan="2" class="nt">${c.miss} зардал тохируулаагүй тул нийт дүнд ороогүй. Админ тохиргоонд үнээ оруулна уу.</td></tr>`:"")+(c.pcs>1?`<tr><td colspan="2" class="nt">Хөшгийн өндөр даавууны өргөнөөс (${CF.fw} см) их тул ${c.pcs} хэсэг залгана.</td></tr>`:"");
+$("bt").textContent=(c.miss?"≥ ":"")+F(c.total)}
+function upd(){cards();scene();brk()}
+const SN=["1 Хэмжээ","2 Хөшиг","3 Даавуу","4 Дүрслэл","5 Үнэ","6 Хүсэлт"],PN=[...document.querySelectorAll("#calc .pn")];
+function go(i){K.step=Math.max(0,Math.min(5,i));PN.forEach((p,j)=>p.classList.toggle("on",j===K.step));$("stp").innerHTML=SN.map((s,j)=>`<button class="${j===K.step?"on":""}" data-g="${j}">${s}</button>`).join("");$("bb").style.visibility=K.step?"visible":"hidden";$("bn").style.visibility=K.step<5?"visible":"hidden"}
+$("stp").onclick=e=>{const b=e.target.closest("[data-g]");if(b)go(+b.dataset.g)};$("bb").onclick=()=>go(K.step-1);$("bn").onclick=()=>go(K.step+1);
+$("calc").addEventListener("input",e=>{if(e.target.classList.contains("k"))upd()});
+$("mc").onclick=e=>{const b=e.target.closest("[data-s]");if(b){K.mi=+b.dataset.s;K.code=null;upd()}};
+$("mc").onchange=e=>{const i=+e.target.dataset.c,x=K.cmp.indexOf(i);if(x>=0)K.cmp.splice(x,1);else if(K.cmp.length<3)K.cmp.push(i);upd()};
+$("cf").onclick=e=>{const c=e.target.closest("[data-f]");if(c){K.cat=+c.dataset.f;upd()}};
+$("cd").onclick=e=>{const c=e.target.closest("[data-k]");if(c){K.code=c.dataset.k;upd()}};
+const AF=[["fw","Даавууны өргөн (см)"],["hem","Давхарлан оёх нөөц / тал (см)"],["sew","Оёдол ₮ / м даавуу"],["sheer","Тюль ₮ / м"],["rail","Карниз ₮ / м"],["acc","Дагалдах ₮ / цонх"],["ins","Угсралт ₮ / цонх"],["del","Хүргэлт ₮"]];
+$("adm").innerHTML=AF.map(([k,l])=>`<div><label>${l}</label><input data-a="${k}" type="number" value="${CF[k]??""}"></div>`).join("")+M.map(m=>`<div><label>${m.n} ₮ / м</label><input data-p="${m.id}" type="number" placeholder="${m.p??"тохируулаагүй"}" value="${CF.pr[m.id]??""}"></div>`).join("");
+$("adm").oninput=e=>{const t=e.target,x=t.value===""?null:+t.value;if(t.dataset.a)CF[t.dataset.a]=x;else if(t.dataset.p)CF.pr[t.dataset.p]=x;try{localStorage.setItem("lenaCF",JSON.stringify(CF))}catch(_){}upd()};
+$("rs").onclick=()=>{const c=calc(K.mi);if(!$("rn").value||!$("rp").value){$("ro").textContent="Нэр, утасны дугаараа оруулна уу.";return}
+const t=`LENA HOME — үнийн саналын хүсэлт\nНэр: ${$("rn").value}\nУтас: ${$("rp").value}\nХаяг: ${$("ra").value}\nОгноо: ${$("rd").value}\nЦонх: ${K.w}×${K.h} см × ${K.n}\nХөшиг: ${K.style}, ${K.fu}×, ${K.layer?"+ тюль":"үндсэн"}\nДаавуу: ${K.mi!=null?M[K.mi].n+" "+(K.code||""):"—"}\nУрьдчилсан үнэ: ${F(c.total)}${c.miss?" (зарим зардал тохируулаагүй)":""}`;
+try{const q=JSON.parse(localStorage.getItem("lenaReq")||"[]");q.push(t);localStorage.setItem("lenaReq",JSON.stringify(q))}catch(_){}
+$("ro").textContent=t+"\n\nСервер холбогдоогүй тул хүсэлт илгээгдээгүй. Дээрх хураангуйг хуулж Facebook хуудсаар эсвэл 7747 7788 дугаараар илгээнэ үү.";try{navigator.clipboard.writeText(t)}catch(_){}};
+go(0);upd();
+applyLang();

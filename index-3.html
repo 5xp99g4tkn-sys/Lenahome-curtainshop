@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="mn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>LENA HOME — Custom Curtains</title>
+<meta name="description" content="Lena Home: захиалгат хөшиг, Улаанбаатар.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><div class="logo">LENA HOME</div>
+<nav><a href="#calc" data-i="n5"></a><a href="#collections" data-i="n1"></a><a href="#services" data-i="n3"></a><a href="#contact" data-i="n4"></a></nav>
+<div class="hd" style="display:flex;gap:8px;align-items:center"><select id="lang" style="width:auto;border-radius:999px" aria-label="Language"><option value="mn">Монгол</option><option value="en">English</option></select>
+<button class="ib" id="theme" aria-label="Light / Dark" title="Light / Dark"><svg viewBox="0 0 24 24" id="ti"></svg></button><a class="btn" href="tel:+97677477788" style="border-radius:999px">7747 7788</a><button class="ib" id="burger" aria-label="Menu"><svg viewBox="0 0 24 24" id="bi"><path d="M4 8h16M4 16h16"/></svg></button></div></header>
+
+<div class="hero"><h1 data-i="h1"></h1><p data-i="hp"></p><a class="btn" href="#calc" data-i="cta1"></a> <a class="btn o" href="#collections" data-i="cta2"></a></div>
+
+<section id="collections"><h2 data-i="n1"></h2>
+<div class="r2" style="margin:16px 0;max-width:520px"><input id="q" data-ph="search"><select id="mf"></select></div>
+<p id="selTxt" class="mu" style="font-weight:600"></p><div id="cols" class="grid"></div></section>
+
+<section id="calc"><h2>Хөшгийн үнэ тооцоолуур</h2><p class="mu">Цонхныхоо хэмжээг оруулж, даавуугаа сонгоод урьдчилсан үнийг шууд хараарай. Үнэ нь анхны урьдчилсан тооцоо бөгөөд эцсийн үнийг мэргэжлийн хэмжилт, зөвлөгөөний дараа баталгаажуулна.</p>
+<div class="stp" id="stp"></div>
+<div class="pn on card"><h3>1. Цонхны хэмжээ</h3><div class="fg" style="margin-top:12px">
+<div><label>Цонхны өргөн (см)</label><input class="k" id="kw" type="number" value="200"></div>
+<div><label>Цонхны өндөр (см)</label><input class="k" id="kh" type="number" value="150"></div>
+<div><label>Цонхны тоо</label><input class="k" id="kn" type="number" min="1" value="1"></div>
+<div><label>Хана хоорондын өргөн (см, заавал биш)</label><input class="k" id="kw2" type="number" placeholder="жишээ: 320"></div>
+<div><label>Таазны өндөр (см)</label><input class="k" id="kc" type="number" value="270"></div>
+<div><label>Угсралтын төрөл</label><select class="k" id="ki"><option value="ceil">Таазанд карниз</option><option value="wall">Хананд карниз</option><option value="rod">Бариул (eyelet)</option></select></div>
+<div><label>Угсралтын үйлчилгээ</label><label style="color:var(--tx);font-size:14px"><input class="k" id="kins" type="checkbox" style="width:auto"> Угсралт хийлгэнэ</label></div></div></div>
+<div class="pn card"><h3>2. Хөшгийн төрөл</h3><div class="fg" style="margin-top:12px">
+<div><label>Нугалааны хэв маяг</label><select class="k" id="ks"><option value="wave">Долгион (Wave)</option><option value="pencil">Харандаан нугалаа</option><option value="pinch">Чимхсэн нугалаа</option><option value="eyelet">Нүхэн (Eyelet)</option></select></div>
+<div><label>Давхарга</label><select class="k" id="kl"><option value="0">Үндсэн даавуу</option><option value="1">Үндсэн + тюль</option></select></div>
+<div><label>Нягтрал</label><select class="k" id="kf"><option value="1.5">1.5× — хөнгөн</option><option value="2" selected>2.0× — стандарт</option><option value="2.5">2.5× — тансаг</option><option value="3">3.0× — нягт</option></select></div>
+<div><label>Хөшгийн тоо</label><select class="k" id="kp"><option value="1">1 тал</option><option value="2" selected>2 тал</option></select></div>
+<div><label>Урт</label><select class="k" id="kfl"><option value="1">Шалан хүртэл</option><option value="0">Цонхны тавцан хүртэл</option></select></div></div></div>
+<div class="pn card"><h3>3. Даавуу сонгох</h3><div class="chips" id="cf" style="max-height:none;margin-bottom:12px"></div>
+<div class="grid" id="mc"></div><div id="cmp" style="margin-top:14px"></div>
+<div id="cd" style="margin-top:14px"></div><div class="fg" style="margin-top:10px;max-width:360px"><div><label>Урьдчилсан өнгө (албан ёсны swatch биш)</label><input class="k" id="kcol" type="color" value="#cdbfa6" style="height:36px;padding:2px"></div></div></div>
+<div class="pn card"><h3>4. Дүрслэл</h3><div id="sc" style="margin-top:12px"></div><p class="nt" id="scn"></p><p class="nt">Өнгө нь зөвхөн урьдчилсан харагдац. Бодит даавууны өнгө, бүтэц ялгаатай байж болно.</p></div>
+<div class="pn card"><h3>5. Үнийн задаргаа</h3><table class="bk" id="bk" style="margin-top:12px"></table><p class="nt">Энэ нь анхны урьдчилсан тооцоо. Эцсийн үнийг LENA HOME-ын мэргэжлийн хэмжилт, зөвлөгөөний дараа баталгаажуулна.</p></div>
+<div class="pn card"><h3>6. Үнийн санал авах хүсэлт</h3><div class="fg" style="margin-top:12px"><div><label>Нэр</label><input id="rn"></div><div><label>Утасны дугаар</label><input id="rp"></div><div><label>Хаяг</label><input id="ra"></div><div><label>Хүссэн огноо</label><input id="rd"></div></div>
+<p style="margin-top:12px"><button class="btn" id="rs">Хүсэлт бэлтгэх</button> <a class="btn o" href="tel:+97677477788">Залгах 7747 7788</a></p><pre id="ro" class="nt" style="white-space:pre-wrap"></pre></div>
+<div class="nv"><button class="btn o" id="bb">← Өмнөх</button><button class="btn" id="bn">Дараах →</button></div>
+<div class="bar"><span>Урьдчилсан үнэ (анхны тооцоо)</span><b id="bt">—</b></div>
+<details class="card" style="margin-top:20px"><summary>Админ тохиргоо (үнэ ба тооцооны дүрэм)</summary><p class="nt">Бүх үнийг энд оруулна. Хоосон бол «тохируулаагүй» гэж харагдана. Одоогоор энэ төхөөрөмжид хадгална; жинхэнэ админ нэвтрэлт, өгөгдлийн сан хараахан холбогдоогүй.</p><div class="fg" id="adm"></div></details></section>
+
+<section id="services"><h2 data-i="n3"></h2><div class="grid" id="svc"></div></section>
+
+<section id="contact"><h2 data-i="n4"></h2><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+<div class="card"><h3>LENA HOME</h3><p class="mu" data-i="bd"></p>
+<p>Hunnu Street, 26th Khoroo, Bayanzurkh District, Ulaanbaatar, Mongolia, Töv 31546</p>
+<p><a class="btn" href="tel:+97677477788">7747 7788</a> <a class="btn o" target="_blank" rel="noopener" href="https://www.facebook.com/share/1EocESec85/?mibextid=wwXIfr">Facebook</a> <a class="btn o" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hunnu+Street+26th+Khoroo+Bayanzurkh+Ulaanbaatar" data-i="dir"></a></p></div>
+<div class="card"><h3 data-i="req"></h3><p class="mu" data-i="fm"></p>
+<input id="fn" data-ph="nm" style="margin-bottom:8px"><input id="fp" data-ph="ph" style="margin-bottom:8px"><input id="fd" data-ph="dt" style="margin-bottom:8px">
+<button class="btn" id="send" data-i="send"></button><p id="fo" class="mu"></p></div></div></section>
+<footer>© LENA HOME · Ulaanbaatar</footer>
+
+<script src="script.js"></script></body></html>
